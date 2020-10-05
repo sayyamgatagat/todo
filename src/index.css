@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.login-page{
+  text-align: center;
+  padding-left: 35%;
+  padding-right: 35%;
+  padding-top: 15%;
+}
