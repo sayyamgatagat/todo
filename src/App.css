@@ -55,3 +55,7 @@ a:hover{
 .logout:hover{
   transform: scale(1.1);
 }
+ul li{
+  list-style: none;
+  text-decoration: wavy;
+}
