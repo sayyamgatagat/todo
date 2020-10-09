@@ -7,7 +7,9 @@ function App() {
  
   const taskup = (event) => {
     settask([...tasks,newtask]);
+    setnew('');
   }
+  
   console.log(tasks);
   return(
   <div className='App'>    
