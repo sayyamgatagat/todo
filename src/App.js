@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
+import ReactDOM from 'react-dom';
+import $ from "jquery";
 import './App.css';
 
 function App() {
+  var clicked = false;
   const [tasks, settask] = useState(['Sample Task 1','Sample Task 2']);
   const [newtask, setnew]= useState('');
- 
   const taskup = (event) => {
     settask([...tasks,newtask]);
     setnew('');
@@ -26,13 +28,18 @@ function App() {
 </form>
 </div>
   <ul>
-    {
-      tasks.map(item =>(
-        <div class="list-div">
-          <li className='listitem'>{item}</li>
+      <div className='box'>
+      {tasks.map(item =>(
+        <div className='listitem' >      
+          <li><span onClick={(e)=>{clicked = !clicked; 
+            if(clicked)
+              e.target.style.textDecoration = 'line-through';
+            else
+            e.target.style.textDecoration = 'none';
+          }}>{item}</span><i class="far fa-trash-alt"></i> </li>
         </div>
-      ))
-    }
+        ))}
+      </div>
   </ul>
   </div>
   )

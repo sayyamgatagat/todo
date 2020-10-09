@@ -55,7 +55,33 @@ a:hover{
 .logout:hover{
   transform: scale(1.1);
 }
+ul{
+  margin-left:auto;
+  margin-right:auto;
+}
 ul li{
   list-style: none;
-  text-decoration: wavy;
+}
+ul {
+  text-align: center;
+  padding-left: 0;
+}
+.box{
+  color: black;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  margin-left: 40%;
+  margin-right: 40%;
+  border-radius: 5%;
+  box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.3) ;
+}
+.listitem{
+  padding: 3%;
+  border-bottom: 1px solid #f1f1f1;
+}
+.listitem:last-child{
+  border-bottom: none;
+}
+.far{
+  padding-left: 10%;
 }
