@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import Login from './login';
+import $ from 'jquery';
 import App from './App';
 ReactDOM.render(
     <App /> ,
