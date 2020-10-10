@@ -1,6 +1,6 @@
 import React, { useState }  from 'react';
 import ReactDOM from 'react-dom';
-import $ from "jquery";
+import $, { nodeName } from "jquery";
 import './App.css';
 
 function App() {
@@ -30,12 +30,17 @@ function App() {
       <div className='box'>
       {tasks.map(item =>(
         <div className='listitem' >      
-          <li><span onClick={(e)=>{clicked = !clicked; 
-            if(clicked)
+          <li><span onClick={(e)=>{e.target.clicked = !e.target.clicked; 
+            if(e.target.clicked)
               e.target.style.textDecoration = 'line-through';
             else
             e.target.style.textDecoration = 'none';
-          }}>{item}</span><i class="far fa-trash-alt"></i> </li>
+          }}>{item}</span><i class="far fa-trash-alt" onClick={(e)=>{
+            settask(tasks.filter((e) =>{
+              return e!==item;
+            }))
+            
+          }}></i> </li>
         </div>
         ))}
       </div>
@@ -43,4 +48,5 @@ function App() {
   </div>
   )
 };
+
 export default App;
